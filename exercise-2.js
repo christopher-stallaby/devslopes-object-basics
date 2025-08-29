@@ -27,3 +27,18 @@ const papaJohns = {
 // DO NOT EDIT THE ABOVE OBJECT // 
 
 // YOUR WORK GOES HERE // 
+function grabCategories(object) {
+  return Object.keys(object);
+};
+function verifyValues(object, numValues) {
+  return Object.values(object).length === numValues;
+};
+function getToppingsInfo(object){
+  return Object.entries(object.pizzaToppings);
+};
+
+
+console.log("Pizza place info: ", grabCategories(papaJohns));
+console.log("Pizza toppings: ", grabCategories(papaJohns.pizzaToppings));
+console.log("Num values match: ", verifyValues(papaJohns, 8));
+console.log("Pizza toppings info: ", getToppingsInfo(papaJohns));
