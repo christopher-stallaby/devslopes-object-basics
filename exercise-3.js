@@ -49,8 +49,12 @@ function toppingsPriceRange(pizzaPlace) {
 
 function calculateAverageRating(pizzaPlace) {
   const reviews = pizzaPlace.starReviews;
-  let average = Object.values(reviews).reduce((previousReviewValue, currentReviewValue) => previousReviewValue + currentReviewValue, 0) / Object.values(reviews).length;
-  return (average.toFixed(2));
+  let sum = 0;
+  let count = Object.keys(reviews).length;
+  for (key in reviews) {
+    sum += reviews[key];
+  }
+  return (sum / count).toFixed(2);
 }
 
 printPizzaPlace(dominos);
