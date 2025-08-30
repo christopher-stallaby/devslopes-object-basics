@@ -46,7 +46,7 @@ function toppingsPriceRange(pizzaPlace) {
   return [highest, lowest];
 }
 
-// console.log(toppingsPriceRange(dominos));
+console.log(toppingsPriceRange(dominos));
 
 function calcAverage(pizzaPlace) {
   const { starReviews } = pizzaPlace;
