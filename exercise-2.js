@@ -36,9 +36,17 @@ function verifyValues(object, numValues) {
 function getToppingsInfo(object){
   return Object.entries(object.pizzaToppings);
 };
-
+papaJohns.printAd = function(pizzaTopping) {
+  return `Welcome to ${papaJohns.name}! We are located at ${papaJohns.address}. This week, we are having a sale on ${pizzaTopping} for $${papaJohns.pizzaToppings[pizzaTopping]}. ${papaJohns.slogan}`;
+}
 
 console.log("Pizza place info: ", grabCategories(papaJohns));
 console.log("Pizza toppings: ", grabCategories(papaJohns.pizzaToppings));
 console.log("Num values match: ", verifyValues(papaJohns, 8));
 console.log("Pizza toppings info: ", getToppingsInfo(papaJohns));
+console.log(papaJohns.printAd("bacon"));
+
+papaJohns.address = "123 Nowhere Lane";
+papaJohns.slogan = "Get it while it's hot!";
+
+console.log(papaJohns.printAd("bacon"));
